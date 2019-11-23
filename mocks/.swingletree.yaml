@@ -1,0 +1,11 @@
+yoke:
+  reports:
+    - plugin: test
+      contenttype: application/yaml
+      report: mocks/.swingletree.yaml
+    - plugin: twistlock
+      contenttype: application/json
+      report: mocks/test.json
+    - plugin: ../test/s/test2abc
+      contenttype: application/json
+      report: notavailable.json

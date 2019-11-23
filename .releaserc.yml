@@ -1,0 +1,17 @@
+branch: "master"
+noCI: true
+dryRun: false
+npmPublish: false
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/release-notes-generator"
+  - ["@semantic-release/exec", {
+      "verifyReleaseCmd": 'VERSION=${nextRelease.version} make dist'
+    }]
+  - ["@semantic-release/github", {
+      "assets": [
+        {"path": "dist/yoke-linux-amd64"},
+        {"path": "dist/yoke-win-amd64.exe"},
+        {"path": "dist/yoke-darwin-amd64"}
+      ]
+    }]
