@@ -62,7 +62,7 @@ func main() {
 				},
 				cli.StringFlag{
 					Name:        "config, c",
-					Value:       ".swingletree.yaml",
+					Value:       ".swingletree.yml",
 					Usage:       "Swingletree repository configuration file",
 					Destination: &configFile,
 				},
