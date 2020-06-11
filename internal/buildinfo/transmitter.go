@@ -78,12 +78,12 @@ func (info BuildInfo) Transmit(apiBase, token string, config swingletree.Config)
 
 	client.
 		SetBasicAuth("yoke", token).
-		SetHeader("X-swingletree-origin", info.GitInfo.Remote.Url).
-		SetHeader("X-swingletree-org", info.GitInfo.Organization).
-		SetHeader("X-swingletree-repo", info.GitInfo.Repository).
-		SetHeader("X-swingletree-sha", info.GitInfo.Sha).
-		SetHeader("X-swingletree-branch", info.GitInfo.BranchName).
-		SetHeader("X-swingletree-uid", uuid)
+		SetHeader("swingletree-origin", info.GitInfo.Remote.Url).
+		SetHeader("swingletree-org", info.GitInfo.Organization).
+		SetHeader("swingletree-repo", info.GitInfo.Repository).
+		SetHeader("swingletree-sha", info.GitInfo.Sha).
+		SetHeader("swingletree-branch", info.GitInfo.BranchName).
+		SetHeader("swingletree-uid", uuid)
 
 	var missing, failures int
 
