@@ -17,7 +17,7 @@ This section covers yoke usage.
 Print the publish help of your yoke version with `yoke publish -h`
 
 Yoke should be invoked after your build has generated the reports you want to upload to Swingletree.
-Reports intended for upload are listed in the repository `.swingletree.yaml`. A report needs to be processable by a
+Reports intended for upload are listed in the repository `.swingletree.yml`. A report needs to be processable by a
 Swingletree Plugin running in your Swingletree installation.
 
 ```yaml
