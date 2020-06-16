@@ -46,6 +46,20 @@ func main() {
 						return nil
 					},
 				},
+				{
+					Name:  "env",
+					Usage: "prints .env file contents for consumption",
+					Action: func(c *cli.Context) error {
+						info, err := buildinfo.NewBuildInfo()
+						if err != nil {
+							return cli.NewExitError("Failed to generate contents", 100)
+						}
+
+						fmt.Println(info.DotEnv())
+
+						return nil
+					},
+				},
 			},
 		},
 
